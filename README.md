@@ -40,8 +40,8 @@ The starter website tutorial can be found here [Writing your first Django app](h
    &#9;  - Type `git --version` to check if Git is installed
    
   
-2. Open terminal in the folder for placing the project into
-3. Type: `https://github.com/StefanBonney/Cyber-Security-Base_Course-Project_Helsinki-University_2021`
+2. Open Git Bash in the folder for placing the project into (left mouse option once Git installed)
+3. Type: `git clone https://github.com/StefanBonney/Cyber-Security-Base_Course-Project_Helsinki-University_2021`
 
 
 ## Getting Started
