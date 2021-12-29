@@ -9,8 +9,9 @@ The task is to create a web application that has at least five different cyber s
 from the 2017 or 2021 list. 
 
 
-<p> [OWASP List](https://owasp.org/www-project-top-ten/) </p>
-<p> [Course Website](https://cybersecuritybase.mooc.fi/) </p>
+[OWASP List](https://owasp.org/www-project-top-ten/) 
+
+[Course Website](https://cybersecuritybase.mooc.fi/) 
 
 ## Repository / Webapp Description
 
