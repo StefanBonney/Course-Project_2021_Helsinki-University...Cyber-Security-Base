@@ -39,7 +39,7 @@ The starter website tutorial can be found here [Writing your first Django app](h
    For installing GIT see [Installing GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
   
 2. Open terminal in the folder for placing the project into
-3. Type: `git clone https://github.com/`
+3. Type: `https://github.com/StefanBonney/Cyber-Security-Base_Course-Project_Helsinki-University_2021`
 
 
 ## Getting Started
