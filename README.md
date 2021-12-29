@@ -46,7 +46,7 @@ The starter website tutorial can be found here [Writing your first Django app](h
 
 ## Getting Started
 
-1. From the clone folder, in terminal move to the folder InsecureCoinSite, which contains the file manage.py
+1. The root folder for the clone should contain the file manage.py, move into this folder with terminal
 2. Type: `python3 manage.py runserver`
 3. Open a browser (f.ex. chorme) and navigate to: `localhost:8000/CoinMiner`
 4. This will take you to the login page. There are two normal user profiles provided.
