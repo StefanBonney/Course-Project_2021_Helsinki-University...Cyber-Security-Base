@@ -36,7 +36,7 @@ The starter website tutorial can be found here [Writing your first Django app](h
 1. Install the dependencies, instructions can be found here [Setup Guide](https://cybersecuritybase.mooc.fi/installation-guide)
    (See sections - Installing Python 3, Installing additional packages)
   
-   For installing GIT see [Installing GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+   For installing Git see [Installing GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
    &#9;  - Type `git --version` to check if Git is installed
    
   
