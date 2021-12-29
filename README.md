@@ -35,7 +35,9 @@ The starter website tutorial can be found here [Writing your first Django app](h
 
 1. Install the dependencies, instructions can be found here [Setup Guide](https://cybersecuritybase.mooc.fi/installation-guide)
    (See sections - Installing Python 3, Installing additional packages)
-   For installing GIT see [Installing GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  
+  For installing GIT see [Installing GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  
 2. Open terminal in the folder for placing the project into
 3. Type: `git clone https://github.com/`
 
