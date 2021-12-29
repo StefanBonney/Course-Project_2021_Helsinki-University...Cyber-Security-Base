@@ -37,7 +37,7 @@ The starter website tutorial can be found here [Writing your first Django app](h
    (See sections - Installing Python 3, Installing additional packages)
   
    For installing GIT see [Installing GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-   &#9: Type `git --version` to check if Git is installed
+   &#9; Type `git --version` to check if Git is installed
    
   
 2. Open terminal in the folder for placing the project into
