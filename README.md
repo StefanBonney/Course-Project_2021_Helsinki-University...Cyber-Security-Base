@@ -69,7 +69,9 @@ The site contains the following URLs:
 
 `http://localhost:8000/CoinMiner/admin/`
 The defult admin panel provided by Django, it allows for things like creating new users and other application objects
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![admin](images/admin.png)
+<p align="center">
+  <img src="images/admin.png" />
+</p>
 
 `http://localhost:8000/CoinMiner/login/`
 Login view provided by the Django framework to allow for normal user login
