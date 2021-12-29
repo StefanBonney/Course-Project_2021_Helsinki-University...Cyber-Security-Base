@@ -75,20 +75,31 @@ The defult admin panel provided by Django, it allows for things like creating ne
 
 `http://localhost:8000/CoinMiner/login/`
 Login view provided by the Django framework to allow for normal user login
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![login](images/login.png)
+
+<p align="center">
+  <img src="images/login.png" />
+</p>
+
 
 `http://localhost:8000/CoinMiner/`
 The index/start page of the website. It lists the coins that can be mined and allows for adding processing power.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![index](images/index.png)
+<p align="center">
+  <img src="images/index.png" />
+</p>
 
 `http://localhost:8000/CoinMiner/1/`
 The detail view. 1 can be substituted for any number and represents the coin id passed (f.ex. Bitcoin). 
 This page allows to input an amount to be mined of the selected coin. 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![detail](images/detail.png)
+<p align="center">
+  <img src="images/detail.png" />
+</p>
+
 
 `http://localhost:8000/CoinMiner/1/results/`
 The results page. Once an amount has been mined this page lists all the amounts of this coin, mined by each of the other users.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![results](images/results.png)
+<p align="center">
+  <img src="images/results.png" />
+</p>
 
 `http://localhost:8000/CoinMiner/1/30/mine/`
 The post request from the form in the detail view is sent to this URL. The logic for processing the transaction is completed
@@ -97,11 +108,15 @@ there after which a redirect is sent back, directing the browser to the results 
 `http://localhost:8000/CoinMiner/1/error/`
 If the user fails to pass in an amount to mine on the detail page or tries to mine an amount that is larger than the processing
 power available to him, he is sent to the error page. The page contains a link to the start page.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![error](images/error.png)
+<p align="center">
+  <img src="images/error.png" />
+</p>
 
 `http://localhost:8000/CoinMiner/1/add/`
 The page for adding processing power. If the add PP button is pressed from the startpage the user will be taken to this page.
 That button uses the get method. There is also a field for adding a chosen amount of processing power. if the button for that 
 field is pressed it sends a POST request to the URL which adds the specified amount of processing power to the users account.   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![add](images/add.png)
+<p align="center">
+  <img src="images/add.png" />
+</p>
 
