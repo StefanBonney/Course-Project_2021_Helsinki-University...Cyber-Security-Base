@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title>My coins</title>
+  </head>
+  <body>
+
+    <h1>{{ coin.description }}</h1>
+
+    <p>The amount mined by you and your competitors</p>
+    <ul>
+    {% for coinamount in coin.coinamount_set.all %}
+        <li>{{ coinamount.miner.username }}: {{ coinamount.amount }} </li>
+    {% endfor %}
+    </ul>
+
+    <p><a href="{% url 'CoinMiner:detail' coin.id %}">Mine again?</a></p>
+    <p><a href="{% url 'CoinMiner:index'%}">Startpage?</a></p>
+    
+
+<!-- FLAW 5: CROSS-SITE SCRIPTING XSS (OWASP 2017-07) -->    
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <p>You mined {{message}} {{ coin.description }}</p>
+
+    
+    <script type="text/javascript">
+    var received_data  = "{{ latest_mt_list |safe }}";
+    console.log("received_data")
+    console.log(received_data)
+    </script>
+
+    {% if latest_mt_list %}
+      <ul>
+      {% for mt in latest_mt_list  %}
+        <li> Mined amount: {{mt.amount_text | safe}} {{ mt.coin_text }} </li>  
+     
+      {% endfor %}
+      </ul>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    {% else %}
+     <p>No coins are available.</p>
+    {% endif %}
+
+
+
+  </body>
+</html>

@@ -1,0 +1,92 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title>My coins</title>
+  </head>
+  <body>
+
+
+        <h1> Welcome to CoinMiner </h1>
+
+<!-- FLAW 3: SENSITIVE DATA EXPOSURE (OWASP 2017-A03) -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <script type="text/javascript">
+            var received_data  = "{{ accounts|safe }}";
+            console.log(received_data)
+            </script>
+
+            <ul>
+            {% for acc in accounts %}
+                {% if acc.miner.username == user.username %}
+                    <table>
+                    <th style="text-align:right">User: {{acc.miner.username}} <td>
+                    </table>
+                    {% endif %}
+            {% endfor %}
+            </ul>
+
+        
+        <table>
+        <th style="text-align:right">User: {{user.username}} <td>
+        </table>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->        
+
+
+
+
+
+
+        <p> A list of the coins that can be mined & amount mined</p>
+        <p> Click on the coin to mine it</p>
+
+        {% if latest_coin_list %}
+            <ul>
+            {% for ca in coinAmount %}
+                <li><b><a href="{% url 'CoinMiner:detail' ca.coin.id %}">{{ ca.coin.description }}</a></b>  
+
+                    <p>{{ ca.amount }}</p>
+     
+            {% endfor %}
+            </ul>
+
+
+        {% else %}
+            <p>No coins are available.</p>
+        {% endif %}
+
+        <p> The processing power available to you:  {{pp}}</p>
+
+
+        <script> 
+          var u = "{{user}}"; 
+          console.log("user: " + u);
+        </script>
+
+        <form action='add' method="GET"> 
+        <b><label for="add" > Add 1 ProcessingPower </label><br><b>	
+        <input type="submit" value="Add PP"/>
+        </form>
+        
+<!-- FLAW 1: INJECTION (OWASP 2017-A01) -->       
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->        
+        <p></p>
+        <form action="add/" method="POST" enctype="multipart/form-data">
+        <input type="text" name="add" id="add">
+        <b><label for="add" > Choose your processing power </label><b>
+        <input type="submit" value="Submit">
+        </form>
+        <p></p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->        
+
+        <form action='/logout/' method="POST">
+         {% csrf_token %}
+         <input type="submit" value="Logout"/>
+        </form>
+
+  </body>
+</html>

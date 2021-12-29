@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title>My coins</title>
+  </head>
+  <body>
+
+		<h1>{{ coin.description }}</h1>
+
+
+	</ul>
+        <p></p>
+		<form action="{% url 'CoinMiner:mine' coin.id %}" method="post">
+		<input type="text" name="mineamount" id="mineamount">
+		<label for="mineamount">{{ mineamount.MineAmount_text }}</label><br>
+		<input type="submit" value="Mine">
+		</form>
+
+
+  </body>
+</html>

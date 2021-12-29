@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title>My coins</title>
+  </head>
+  <body>
+
+<!-- FLAW 5: CROSS-SITE SCRIPTING XSS (OWASP 2017-07) -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  	<p>You mined {{message | safe}} {{ coin.description }}</p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	  <p> The request exceeds the processing power available to you or you input an incorrect value </p>
+
+
+	  <p><a href="{% url 'CoinMiner:index'%}">Startpage?</a></p>
+
+
+	  <div class={{ message }}></div>
+
+<!-- FLAW 5: CROSS-SITE SCRIPTING XSS (OWASP 2017-07) -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <p id=newElem> </p>
+  
+    <script>
+    var received_data  = {{ message }};
+    console.log(received_data)
+    let elem = document. getElementById("newElem");
+    elem.innerHTML = received_data;
+    </script>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  </body>
+</html>
