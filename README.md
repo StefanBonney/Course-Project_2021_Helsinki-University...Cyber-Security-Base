@@ -2,7 +2,7 @@
 
 ## Cyber Security Base 2021
 
-This website is built as the first Project of the course Cyber Security Base, a course series by University of Helsinki and MOOC.fi in 
+This website is built as the first Project for the course Cyber Security Base, a course series by University of Helsinki and MOOC.fi in 
 collaboration with F-Secure. 
 
 The task is to create a web application that has at least five different cyber security flaws from the OWASP top ten list, either 
@@ -26,7 +26,7 @@ A note on the webapp: The amount of processing power the users can add to themse
 which obviously makes it less playable as an actual game, but I have kept it this way to keep the webapp quite simple. 
 Actually, the site is perhaps best seen as a prototype for a simple webapp game. 
 
-The web app is based on Django's starter website tutorial. I created the application from the tutorial and modified it to
+The webapp is based on Django's starter website tutorial. I created the application from the tutorial and modified it to
 become the current website.
 
 The starter website tutorial can be found here [Writing your first Django app](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)
@@ -46,7 +46,7 @@ The starter website tutorial can be found here [Writing your first Django app](h
 
 ## Getting Started
 
-1. The root folder for the clone should contain the file manage.py, move into this folder with terminal
+1. The root folder for the cloned project should contain the file manage.py, move into this folder with terminal
 2. Type: `python manage.py runserver` (if on linux `python3 manage.py runserver`)
 3. Open a browser (f.ex. chorme) and navigate to: `localhost:8000/CoinMiner`
 4. This will take you to the login page. There are two normal user profiles provided.
@@ -93,15 +93,16 @@ The index/start page of the website. It lists the coins that can be mined and al
 </p>
 
 `http://localhost:8000/CoinMiner/1/`
-The detail view. 1 can be substituted for any number and represents the coin id passed (f.ex. Bitcoin). 
+The detail view. Number shown in the URL (here 1) can be substituted for any valid number and represents the coin id passed (f.ex. Bitcoin). 
 This page allows to input an amount to be mined of the selected coin. 
 <p align="center">
   <img src="images/detail.png" />
 </p>
 
 
-`http://localhost:8000/CoinMiner/1/results/`
+`http://localhost:8000/CoinMiner/1/30/results/`
 The results page. Once an amount has been mined this page lists all the amounts of this coin, mined by each of the other users.
+(30 reprsents the amount mined, 1 represents the coin mined)
 <p align="center">
   <img src="images/results.png" />
 </p>
@@ -119,7 +120,7 @@ power available to him, he is sent to the error page. The page contains a link t
 
 `http://localhost:8000/CoinMiner/1/add/`
 The page for adding processing power. If the add PP button is pressed from the startpage the user will be taken to this page.
-That button uses the get method. There is also a field for adding a chosen amount of processing power. if the button for that 
+That button uses the get method. There is also a field for adding a chosen amount of processing power. If the button for that 
 field is pressed it sends a POST request to the URL which adds the specified amount of processing power to the users account.   
 <p align="center">
   <img src="images/add.png" />
