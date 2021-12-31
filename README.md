@@ -43,6 +43,8 @@ The starter website tutorial can be found here [Writing your first Django app](h
 2. Open Git Bash in the folder for placing the project into (left mouse option once Git installed)
 3. Type: `git clone https://github.com/StefanBonney/Cyber-Security-Base_Course-Project_Helsinki-University_2021`
 
+Tested on Windows 10 and Ubuntu 20
+
 
 ## Getting Started
 
